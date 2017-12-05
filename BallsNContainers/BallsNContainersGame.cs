@@ -72,21 +72,21 @@ namespace BallsNContainers
                 return maxLevelNodeNum + 1;
             }
 
-            int _maxLevelNodeNum = maxLevelNodeNum;           
+            int returnedMaxLevelNodeNum = maxLevelNodeNum;
             
             if (node.LeftChildNode == null)
             {
                 node.LeftChildNode = new Node();
-                _maxLevelNodeNum = InitNode(node.LeftChildNode, currentLevel + 1, maxLevel, randomState, _maxLevelNodeNum);
+                returnedMaxLevelNodeNum = InitNode(node.LeftChildNode, currentLevel + 1, maxLevel, randomState, returnedMaxLevelNodeNum);
             }
 
             if (node.RightChildNode == null)
             {
                 node.RightChildNode = new Node();
-                _maxLevelNodeNum = InitNode(node.RightChildNode, currentLevel + 1, maxLevel, randomState, _maxLevelNodeNum);
+                returnedMaxLevelNodeNum = InitNode(node.RightChildNode, currentLevel + 1, maxLevel, randomState, returnedMaxLevelNodeNum);
             }
 
-            return _maxLevelNodeNum;
+            return returnedMaxLevelNodeNum;
         }
 
         private Node BallPassesNode(Node node)

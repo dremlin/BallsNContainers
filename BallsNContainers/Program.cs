@@ -6,9 +6,9 @@ namespace BallsNContainers
     {
         static void Main(string[] args)
         {
-            var game = new BallsNContainersGame(8);
+            var game = new BallsNContainersGame();
 
-            Console.Write(string.Format("The zero-based index of the container which does not receive a ball is {0}", game.Play()));
+            Console.Write($"The zero-based index of the container which does not receive a ball is {game.Play()}");
             Console.ReadKey();
         }
     }
